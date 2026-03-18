@@ -1,6 +1,6 @@
 // app/layout.tsx
 import "./globals.css";
-
+import TopMenu from "@/components/TopMenu";
 export const metadata = {
   title: "My Next App",
   description: "Generated with Next.js",
@@ -14,17 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header style={{ padding: "1rem", background: "#eee" }}>
-          <h1>My App</h1>
-        </header>
-
-        <main style={{ padding: "1rem" }}>
+        <TopMenu/>
+        <div className="pt-[50px]">
           {children}
-        </main>
-
-        <footer style={{ padding: "1rem", background: "#eee" }}>
-          <p>© 2026 My App</p>
-        </footer>
+        </div>
       </body>
     </html>
   );
